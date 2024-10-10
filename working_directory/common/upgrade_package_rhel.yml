@@ -83,15 +83,13 @@
 - block:
 
     - name: "{{ names['upg_pkg_name01'] }}"
-      become: true
+
       ansible.builtin.apt:
         name: "{{ item.com_pkg_name }}"
         state: "{{ item.com_pkg_state }}"
         update_cache: "{{ com_pkg_update_cache }}"
       register: result_upg_pkg
-      become_method: sudo  # If using sudo
-      become_user: root     # If necessary
-      # become_password: user
+      become: true
      
     # Post-Processing
     # Store the execution result
