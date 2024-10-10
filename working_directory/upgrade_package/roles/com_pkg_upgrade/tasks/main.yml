@@ -2,7 +2,7 @@
   # Include common parts
 - name: Include common parts
   ansible.builtin.include_tasks:
-    file: "/home/testubun/working_directory/common/upgrade_package_rhel.yml"
+    file: "../working_directory/common/upgrade_package_rhel.yml"
   vars:
     com_error_skip: false
     com_pkg_update_cache: true
