@@ -3,6 +3,7 @@
 - name: Upgrade packages tasks
   hosts: localhost
   gather_facts: false
+  become: true
 
   tasks:
     - name: Start message of playbook
