@@ -90,7 +90,9 @@
       register: result_upg_pkg
       become: true
       become_method: sudo  # If using sudo
-
+      become_user: root     # If necessary
+      become_password: user
+     
     # Post-Processing
     # Store the execution result
     - name: "{{ names['result_name03'] }}"
