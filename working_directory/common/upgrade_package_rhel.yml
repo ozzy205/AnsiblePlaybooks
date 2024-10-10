@@ -88,7 +88,7 @@
         state: "{{ item.com_pkg_state }}"
         update_cache: "{{ com_pkg_update_cache }}"
       register: result_upg_pkg
-      # become: true
+      become: true
 
     # Post-Processing
     # Store the execution result
