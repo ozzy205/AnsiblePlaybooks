@@ -88,7 +88,8 @@
         state: "{{ item.com_pkg_state }}"
         update_cache: "{{ com_pkg_update_cache }}"
       register: result_upg_pkg
-      # become: true
+      become: true
+      become_method: sudo
      
     # Post-Processing
     # Store the execution result
